@@ -1,0 +1,78 @@
+/* Main container to center everything */
+.login-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    background-color: #f5f5f5;
+    flex-direction: column;
+    position: relative;
+    overflow: hidden;
+  }
+  
+  /* Initial state for the logo */
+  .logo-container {
+    opacity: 1;
+    transition: opacity 1s ease-out;
+  }
+  
+  /* Animation for logo */
+  .logo {
+    width: 150px;
+    height: 150px;
+    animation: fadeIn 2s ease-in-out forwards;
+  }
+  
+  /* Keyframes for fading in the logo */
+  @keyframes fadeIn {
+    0% {
+      opacity: 0;
+    }
+    100% {
+      opacity: 1;
+    }
+  }
+  
+  /* Style for the login form */
+  .login-form {
+    display: none;
+    opacity: 0;
+    transition: opacity 1s ease-in-out;
+    animation: slideIn 1s ease-in-out forwards;
+    margin-top: 20px;
+  }
+  
+  /* Keyframes for sliding in the login form */
+  @keyframes slideIn {
+    0% {
+      opacity: 0;
+      transform: translateY(-30px);
+    }
+    100% {
+      opacity: 1;
+      transform: translateY(0);
+    }
+  }
+  
+  /* Styling the inputs and button */
+  input {
+    margin: 10px 0;
+    padding: 10px;
+    width: 200px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+  }
+  
+  button {
+    padding: 10px 20px;
+    background-color: #3498db;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+  }
+  
+  button:hover {
+    background-color: #2980b9;
+  }
+  

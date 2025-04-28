@@ -1,0 +1,59 @@
+apply plugin: 'com.android.application'
+
+android {
+    compileSdkVersion 30 // or use the latest SDK version
+    namespace 'com.iiita.attendance'
+
+    defaultConfig {
+        applicationId "com.iiita.attendance"  // Update to your actual package name
+        minSdkVersion 21
+        targetSdkVersion 30  // or use the latest SDK version
+        versionCode 1
+        versionName "1.0"
+        testInstrumentationRunner "androidx.test.runner.AndroidJUnitRunner"
+    }
+
+    signingConfigs {
+        release {
+           storeFile file("../../keystore/new-release-key.keystore")
+ // Replace with the actual path to your keystore
+            storePassword "Rutwik@2006"             // Replace with your keystore password
+            keyAlias "new-key-alias"                          // Replace with your key alias
+            keyPassword "Rutwik@2006"                    // Replace with your key password
+        }
+    }
+
+    buildTypes {
+        release {
+            signingConfig signingConfigs.release  // Use signing config for release build
+            minifyEnabled false
+            proguardFiles getDefaultProguardFile('proguard-android-optimize.txt'), 'proguard-rules.pro'
+        }
+    }
+
+    packagingOptions {
+        exclude 'META-INF/proguard/*.txt'
+    }
+
+    lintOptions {
+        abortOnError false
+    }
+}
+
+dependencies {
+    implementation 'androidx.appcompat:appcompat:1.7.0'
+    implementation 'androidx.constraintlayout:constraintlayout:2.2.1'
+    implementation 'androidx.core:core-ktx:1.16.0'
+    implementation 'androidx.lifecycle:lifecycle-extensions:2.2.0'
+    implementation 'androidx.activity:activity:1.10.1'
+    implementation 'androidx.fragment:fragment:1.8.6'
+    implementation 'androidx.recyclerview:recyclerview:1.4.0'
+    implementation 'com.google.android.material:material:1.12.0'
+    implementation 'com.getcapacitor:capacitor-android:5.7.7'
+    testImplementation 'junit:junit:4.13.1'
+
+
+
+
+    // Add your other dependencies here as required
+}

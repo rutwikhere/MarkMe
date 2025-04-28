@@ -1,0 +1,51 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+:root {
+  --primary-blue: #0047AB;
+  --primary-red: #cc0000;
+  --primary-green: #00653E;
+  --present-bg: #E6FFE6;
+  --absent-bg: #FFE6E6;
+}
+
+body {
+  @apply font-sans text-gray-800 bg-gray-50;
+}
+
+.card {
+  @apply bg-white rounded-lg shadow-md overflow-hidden;
+}
+
+.btn {
+  @apply px-4 py-2 rounded-md font-medium transition duration-200;
+}
+
+.btn-primary {
+  @apply bg-blue-700 text-white hover:bg-blue-800;
+}
+
+.btn-danger {
+  @apply bg-red-500 text-white hover:bg-red-600;
+}
+
+.input {
+  @apply px-4 py-2 border border-gray-300 rounded-md w-full focus:outline-none focus:ring-2 focus:ring-blue-500;
+}
+
+.student-present {
+  @apply bg-green-50 border-l-4 border-green-500;
+}
+
+.student-absent {
+  @apply bg-red-50 border-l-4 border-red-500;
+}
+
+.nav-link {
+  @apply flex flex-col items-center justify-center text-sm font-medium;
+}
+
+.nav-link.active {
+  @apply text-blue-700;
+}

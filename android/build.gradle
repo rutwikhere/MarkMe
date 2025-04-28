@@ -1,0 +1,29 @@
+// Top-level build file where you can add configuration options common to all sub-projects/modules.
+
+buildscript {
+    repositories {
+        google()
+        mavenCentral()
+        maven { url 'https://packages.capacitorjs.com/maven' }
+    }
+    dependencies {
+        classpath 'com.android.tools.build:gradle:8.9.2'
+        classpath 'com.getcapacitor:capacitor-android:5.7.7'
+    }
+}
+
+apply from: "variables.gradle"
+
+allprojects {
+    repositories {
+        google()
+        mavenCentral()   // Ensure this is here
+
+        maven { url 'https://packages.capacitorjs.com/maven' } // Add this line for Capacitor's repository
+    }
+}
+
+
+task clean(type: Delete) {
+    delete rootProject.buildDir
+}
