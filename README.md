@@ -56,7 +56,6 @@ React + Vite + Zustand frontend for professor attendance management. Connects to
 ### 👤 Profile Page
 ![Profile](screenshots/profile.png)
 
-> Store your screenshots inside a `/screenshots` folder in your repo.
 
 ---
 
