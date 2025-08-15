@@ -11,6 +11,10 @@ React + Vite + Zustand frontend for professor attendance management. Connects to
 
 ---
 
+## 🌐 Live Demo
+👉 [MarkMe App](https://mark-me-eta.vercel.app)  
+
+---
 ## ✨ Features
 - Professor login & authentication  
 - Dashboard with courses, today’s classes & quick stats  
