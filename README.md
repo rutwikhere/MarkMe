@@ -56,6 +56,11 @@ React + Vite + Zustand frontend for professor attendance management. Connects to
 ### 👤 Profile Page
 ![Profile](screenshots/profile.png)
 
+---
+
+## 👨‍💻 Team Members
+- **Rutwik Wakale** — Roll No: IIB2024004  
+- **Ujwal B S** — Roll No: IIB2024045
 
 ---
 
